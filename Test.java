@@ -10,7 +10,7 @@ import java.util.Map.Entry;
  * This main class tests the ordering system of the program.
  * There are different items added to the list.
  * Also, order total and no of items ordered is shown.
- * The system can be enhanced to use Scanner to provide the selective option(Lunch or dinner) to user and take input from them 
+ * The system can be enhanced to use Scanner  to take input and by front end  to provide the selective option(Lunch or dinner) to user and take input from them 
  * and display lunch or drink item as chosen and take the order. 
  */
 public class Test {
