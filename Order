@@ -1,0 +1,33 @@
+package com.restaurant.system;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import java.util.Map;
+
+public class Order {
+	private Map<Item, Integer> Items = new HashMap<Item, Integer>();
+
+	public BigDecimal getTotal()
+	  {
+	    BigDecimal total = BigDecimal.ZERO;
+	    for (Item item : this.Items.keySet())
+	    {
+	      BigDecimal quantity = new BigDecimal(this.Items.get(item));
+	      total = total.add(item.getPrice().multiply(quantity));  
+	      total=total.add(item.getAddOn().getPrice().multiply(quantity));
+	    }
+
+	    return total;
+	  }
+
+	public void add(Item Item, Integer quantity) {
+		this.Items.put(Item, quantity);
+	}
+
+	public Map<Item, Integer> getItemsOfOrder() {
+		return Items;
+	}
+
+}
