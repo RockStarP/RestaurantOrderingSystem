@@ -1,0 +1,19 @@
+
+The answer for queries-
+SQL query1-
+select Name from (select country.Name as name, city.population population from country, city where country.code = city.country group by country.name) where city.population > 400; 
+
+SQL Query2-
+select * from Country country1
+
+where 0 = (
+
+    select  COUNT(1)    from City city1
+
+        JOIN Building building1  ON building1 .CityID = city1.CityID
+
+    where city1.CountryID = country1.CountryID
+
+    )
+
+
